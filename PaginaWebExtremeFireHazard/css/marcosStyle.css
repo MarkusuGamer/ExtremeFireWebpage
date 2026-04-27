@@ -65,7 +65,7 @@ body {
     color: #ff4500;
 }
 
-/* Hero Section */
+
 .main-page {
     height: 100vh;
     display: flex;
@@ -119,7 +119,7 @@ body {
 	text-align: center;
 }
 
-/* Project Layout */
+
 .project-entry {
     margin-bottom: 100px;
 }
@@ -139,7 +139,7 @@ body {
     flex-direction: row-reverse;
 }
 
-/* Image Styling */
+
 .image-container {
     flex: 1;
     overflow: hidden;
@@ -158,7 +158,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Text and Button Styling */
+
 .card-text {
     flex: 1;
 }
@@ -202,7 +202,7 @@ body {
     height: 70vh;
     overflow: hidden;
     border-top: 2px solid #ff4500;
-    border-bottom: 2px solid #ff4500; /* Cerramos el borde naranja */
+    border-bottom: 2px solid #ff4500;
     background-color: #000;
 }
 
@@ -216,12 +216,11 @@ body {
     transition: flex 0.5s ease;
     border-right: 1px solid rgba(255, 69, 0, 0.3);
     
-    /* FONDO NORMAL (El que se ve al principio) */
+
     background-size: cover;
     background-position: center;
 }
 
-/* Capa para el FONDO HOVER */
 .curtain::before {
     content: "";
     position: absolute;
@@ -231,30 +230,28 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0; /* Invisible por defecto */
+    opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 1;
 }
 
-/* --- ASIGNACIÓN DE IMÁGENES --- */
 
-/* YouTube */
 .curtain.youtube { background-image: url(''); }
 .curtain.youtube::before { background-image: url('../media/img/Marcos/Youtube_hover.png'); }
 
-/* Instagram */
+
 .curtain.instagram { background-image: url(''); }
 .curtain.instagram::before { background-image: url('../media/img/Marcos/Instagram_hover.png'); }
 
-/* X / Twitter */
+
 .curtain.linkedin { background-image: url(''); }
 .curtain.linkedin::before { background-image: url('../media/img/Marcos/Linkedin_hover.png'); }
 
 
-/* CONTENIDO (Icono y Texto) */
+
 .curtain-content {
     position: relative;
-    z-index: 2; /* Siempre por encima de los fondos */
+    z-index: 2;
     text-align: center;
 }
 
@@ -270,17 +267,17 @@ body {
     letter-spacing: 2px;
 }
 
-/* --- LÓGICA DEL HOVER --- */
+
 
 .curtain:hover {
-    flex: 1.5; /* Se ensancha un poco */
+    flex: 1.5; 
 }
 
 .curtain:hover::before {
-    opacity: 1; /* El fondo "hover" aparece sobre el normal */
+    opacity: 1; 
 }
 
-/* Oscurecemos ligeramente las que no tienen el foco (opcional) */
+
 .social-curtains:hover .curtain:not(:hover) {
     filter: brightness(0.5);
 }
@@ -290,25 +287,20 @@ body {
     width: 32px;  
     height: 32px; 
     cursor: pointer;
-    z-index: 10000; /* Ensure it's above everything */
+    z-index: 10000;
     background-repeat: no-repeat;
     image-rendering: pixelated; 
-    
-    /* Start invisible and slightly off-screen */
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     
-    /* Ensure it doesn't block clicks when hidden */
     pointer-events: none; 
 }
 
-/* When this class is added, he becomes clickable and visible */
 #lumb-sprite.active {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* IDLE ANIMATION */
 .sprite-idle {
     background-image: url('../media/spriteSheets/Lumb_sheet_01_idle.png');
     animation: idleAnimation 0.6s steps(2) infinite;
@@ -319,31 +311,26 @@ body {
     to { background-position: -64px; }
 }
 
-/* Update the Dance Floor animation to overlay colors on your image */
-/* 1. Corrected Animation Keyframes */
 @keyframes danceFloorOverlay {
     0%   { background-image: linear-gradient(rgba(100, 0, 0, 0.6), rgba(255, 0, 0, 0.6)), url("../media/img/Marcos/fondo.png"); }
     50%  { background-image: linear-gradient(rgba(0, 100, 0, 0.6), rgba(0, 255, 0, 0.6)), url("../media/img/Marcos/fondo.png"); }
     100%  { background-image: linear-gradient(rgba(0, 0, 100, 0.6), rgba(0, 0, 255, 0.6)), url("../media/img/Marcos/fondo.png"); }
 }
 
-/* 2. Consolidated Dancing Mode - REMOVE OTHER body.dancing-mode BLOCKS */
 body.dancing-mode {
     animation: danceFloorOverlay 2s infinite !important;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    overflow: hidden; /* Prevents scrollbars during shake */
+    overflow: hidden;
 }
 
-/* 3. Ensure the shake applies to the page content */
 body.dancing-mode .hero, 
 body.dancing-mode .navbar, 
 body.dancing-mode .content-section {
     animation: heavyShake 0.5s infinite !important;
 }
 
-/* Screen Shake Animation */
 @keyframes heavyShake {
     0% { transform: translate(0, 0); }
     25% { transform: translate(8px, -8px); }
@@ -352,19 +339,16 @@ body.dancing-mode .content-section {
     100% { transform: translate(0, 0); }
 }
 
-/* Centered Sprite Fix */
 #lumb-sprite.on-stage {
     opacity: 1 !important;
     pointer-events: auto;
     top: 50% !important;
     left: 50% !important;
-    /* Use translate to truly center the sprite's anchor point */
     transform: translate(-50%, -50%) scale(10) rotate(0deg) !important;
     z-index: 10001;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Ensure the dance animation is set up */
 .sprite-dance {
     background-image: url('../media/spriteSheets/Lumb_sheet_01_dance.png');
     animation: danceAnimation 1.2s steps(14) infinite;

@@ -10,7 +10,6 @@ function start() {
 }
 // 2. Función que se activa con el onscroll del body
 function manageScroll() {
-    // Navbar
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
@@ -42,7 +41,6 @@ function manageScroll() {
 function lumbParty() {
     isDancing = true;
     
-    // Limpiamos coordenadas de los bordes
     sprite.style.top = ''; sprite.style.bottom = '';
     sprite.style.left = ''; sprite.style.right = '';
 
