@@ -1,0 +1,286 @@
+@font-face {
+    font-family: 'OswaldRegular';
+    src: url('../media/fonts/oswald/static/Oswald-Regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'OswaldRegular', sans-serif;
+    background-color: #0a0a0a; /* Fallback */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../media/img/Marcos/fondo.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+	transition: background-image 0.2s ease-out;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0;           
+    z-index: 1000;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+    height: 60px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #eee;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4500;
+}
+
+/* Hero Section */
+.main-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-page-content h1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #ff4500;
+    border: none;
+    color: white;
+    font-family: 'OswaldRegular';
+    font-size: 1.2rem;
+    cursor: pointer;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background: #ff6a00;
+}
+
+
+.content-section {
+    padding: 100px 10%;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer{
+	padding-bottom: 1%;
+	text-align: center;
+}
+
+/* Project Layout */
+.project-entry {
+    margin-bottom: 100px;
+}
+
+.game-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image Styling */
+.image-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.game-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+/* Text and Button Styling */
+.card-text {
+    flex: 1;
+}
+
+.card-text h2 {
+    color: #ff4500;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #ff4500;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: #ff4500;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+#lumb-sprite {
+    position: fixed;
+    width: 32px;  
+    height: 32px; 
+    cursor: pointer;
+    z-index: 10000; /* Ensure it's above everything */
+    background-repeat: no-repeat;
+    image-rendering: pixelated; 
+    
+    /* Start invisible and slightly off-screen */
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    
+    /* Ensure it doesn't block clicks when hidden */
+    pointer-events: none; 
+}
+
+/* When this class is added, he becomes clickable and visible */
+#lumb-sprite.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* IDLE ANIMATION */
+.sprite-idle {
+    background-image: url('../media/spriteSheets/Lumb_sheet_01_idle.png');
+    animation: idleAnimation 0.6s steps(2) infinite;
+}
+
+@keyframes idleAnimation {
+    from { background-position: 0px; }
+    to { background-position: -64px; }
+}
+
+/* Update the Dance Floor animation to overlay colors on your image */
+/* 1. Corrected Animation Keyframes */
+@keyframes danceFloorOverlay {
+    0%   { background-image: linear-gradient(rgba(100, 0, 0, 0.6), rgba(255, 0, 0, 0.6)), url("../media/img/Marcos/fondo.png"); }
+    50%  { background-image: linear-gradient(rgba(0, 100, 0, 0.6), rgba(0, 255, 0, 0.6)), url("../media/img/Marcos/fondo.png"); }
+    100%  { background-image: linear-gradient(rgba(0, 0, 100, 0.6), rgba(0, 0, 255, 0.6)), url("../media/img/Marcos/fondo.png"); }
+}
+
+/* 2. Consolidated Dancing Mode - REMOVE OTHER body.dancing-mode BLOCKS */
+body.dancing-mode {
+    animation: danceFloorOverlay 2s infinite !important;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden; /* Prevents scrollbars during shake */
+}
+
+/* 3. Ensure the shake applies to the page content */
+body.dancing-mode .hero, 
+body.dancing-mode .navbar, 
+body.dancing-mode .content-section {
+    animation: heavyShake 0.5s infinite !important;
+}
+
+/* Screen Shake Animation */
+@keyframes heavyShake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(8px, -8px); }
+    50% { transform: translate(-8px, 8px); }
+    75% { transform: translate(8px, 8px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Centered Sprite Fix */
+#lumb-sprite.on-stage {
+    opacity: 1 !important;
+    pointer-events: auto;
+    top: 50% !important;
+    left: 50% !important;
+    /* Use translate to truly center the sprite's anchor point */
+    transform: translate(-50%, -50%) scale(10) rotate(0deg) !important;
+    z-index: 10001;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Ensure the dance animation is set up */
+.sprite-dance {
+    background-image: url('../media/spriteSheets/Lumb_sheet_01_dance.png');
+    animation: danceAnimation 1.2s steps(14) infinite;
+}
+
+@keyframes danceAnimation {
+    from { background-position: 0px; }
+    to { background-position: -448px; }
+}
