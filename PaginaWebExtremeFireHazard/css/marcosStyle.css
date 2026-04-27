@@ -195,6 +195,96 @@ body {
     transform: translateY(-3px);
 }
 
+
+.social-curtains {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    border-top: 2px solid #ff4500;
+    border-bottom: 2px solid #ff4500; /* Cerramos el borde naranja */
+    background-color: #000;
+}
+
+.curtain {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: flex 0.5s ease;
+    border-right: 1px solid rgba(255, 69, 0, 0.3);
+    
+    /* FONDO NORMAL (El que se ve al principio) */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Capa para el FONDO HOVER */
+.curtain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* --- ASIGNACIÓN DE IMÁGENES --- */
+
+/* YouTube */
+.curtain.youtube { background-image: url(''); }
+.curtain.youtube::before { background-image: url('../media/img/Marcos/Youtube_hover.png'); }
+
+/* Instagram */
+.curtain.instagram { background-image: url(''); }
+.curtain.instagram::before { background-image: url('../media/img/Marcos/Instagram_hover.png'); }
+
+/* X / Twitter */
+.curtain.linkedin { background-image: url(''); }
+.curtain.linkedin::before { background-image: url('../media/img/Marcos/Linkedin_hover.png'); }
+
+
+/* CONTENIDO (Icono y Texto) */
+.curtain-content {
+    position: relative;
+    z-index: 2; /* Siempre por encima de los fondos */
+    text-align: center;
+}
+
+.social-icon {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.curtain-content span {
+    display: block;
+    color: white;
+    font-family: 'OswaldRegular', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* --- LÓGICA DEL HOVER --- */
+
+.curtain:hover {
+    flex: 1.5; /* Se ensancha un poco */
+}
+
+.curtain:hover::before {
+    opacity: 1; /* El fondo "hover" aparece sobre el normal */
+}
+
+/* Oscurecemos ligeramente las que no tienen el foco (opcional) */
+.social-curtains:hover .curtain:not(:hover) {
+    filter: brightness(0.5);
+}
+
 #lumb-sprite {
     position: fixed;
     width: 32px;  
