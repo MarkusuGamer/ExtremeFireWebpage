@@ -8,7 +8,7 @@ function start() {
 
     setInterval(triggerPeek, 10000);
 }
-// 2. Función que se activa con el onscroll del body
+// 2. Funcion que se activa con el onscroll del body
 function manageScroll() {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -37,7 +37,7 @@ function manageScroll() {
     }
 }
 
-// 3. Función que se activa con el onclick del sprite
+// 3. Funcion que se activa con el onclick del sprite
 function lumbParty() {
     isDancing = true;
     
@@ -58,7 +58,7 @@ function lumbParty() {
     }, 3000);
 }
 
-// 4. Lógica de asomarse (Peek)
+// 4. Funcion de asomarse del lumb
 function triggerPeek() {
     if (isDancing) return; 
 	
