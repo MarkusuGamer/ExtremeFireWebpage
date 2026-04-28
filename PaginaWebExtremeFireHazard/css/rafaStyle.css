@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Google';
+    src: url('../media/fonts/google/GoogleSans.ttf') format('truetype');
+	font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Google';
+    background-color: #0a0a0a;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+footer{
+	font-family: 'Google';
+}
+
+.navbar {
+    position: fixed; 
+    top: 0;           
+    z-index: 1000;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    height: 100px;
+    background: rgba(112, 80, 217, 1);
+    transition: all 0.4s ease;
+	box-sizing: border-box;
+}
+
+.navbar.scrolled {
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+	font-family: 'google-bold', sans-serif;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #eee;
+    text-transform: uppercase;
+    font-size: 15px;
+	font-weight: 700;
+    padding: 8px 15px;
+    transition: transform 0.2s ease;
+	display: inline-block;
+}
+
+.navbar-links a:hover {
+    transform: scale(1.1);
+    color: #e0d4ff;              /* 🎨 Cambia el color */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* ✨ Brillo suave */
+}
+
+
+.main-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	margin-top: 80px;
+}
+
+.main-page-content h1 {
+    font-size: 10vh;
+    margin-bottom: 10px;
+}
+
+/* Contenedor principal */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+.carousel-slide {
+    min-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 100;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+}
+
+#main-text {
+	font-family: 'Google';
+	margin-top: 20px;
+}
+
+
+.footer{
+	padding-bottom: 1%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
