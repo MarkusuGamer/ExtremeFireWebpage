@@ -18,7 +18,7 @@ body {
     background-size: cover;
     color: white;
     overflow-x: hidden;
-	padding-top: 100px;
+	padding-top: 120px;
 }
 
 
@@ -73,7 +73,7 @@ body {
 
 
 .main-page {
-    height: 100vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,14 +81,6 @@ body {
 	
 }
 
-.main-page-content h1 {
-    font-size: 10vh;
-    margin-bottom: 10px;
-}
-
-
-
-/* Contenedor principal */
 .carousel {
     position: relative;
     width: 100%;
@@ -178,7 +170,7 @@ main{
 	font-weight: 500;
 	font-size: 1rem;
 	color: rgb(145, 145, 145);
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 
