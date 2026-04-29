@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Google';
-    src: url('../media/fonts/google/GoogleSans.ttf') format('truetype');
-	font-display: swap;
+    src: url('../media/fonts/google/static/GoogleSansFlex.ttf') format('truetype');
 }
 
 * {
@@ -13,17 +12,15 @@
 
 body {
     font-family: 'Google';
-    background-color: #0a0a0a;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 50%, rgba(36, 15, 66, 1) 100%);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     color: white;
     overflow-x: hidden;
+	padding-top: 100px;
 }
 
-footer{
-	font-family: 'Google';
-}
 
 .navbar {
     position: fixed; 
@@ -45,7 +42,7 @@ footer{
     pointer-events: none;
 }
 
-.logo {
+#logo {
     height: 70px;
 }
 
@@ -53,7 +50,7 @@ footer{
     display: flex;
     gap: 10px;
     list-style: none;
-	font-family: 'google-bold', sans-serif;
+	font-family: 'Google', sans-serif;
 }
 
 .navbar-links a {
@@ -67,10 +64,11 @@ footer{
 	display: inline-block;
 }
 
+
 .navbar-links a:hover {
     transform: scale(1.1);
-    color: #e0d4ff;              /* 🎨 Cambia el color */
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* ✨ Brillo suave */
+    color: #e0d4ff;              
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
 }
 
 
@@ -80,7 +78,7 @@ footer{
     align-items: center;
     justify-content: center;
     text-align: center;
-	margin-top: 80px;
+	
 }
 
 .main-page-content h1 {
@@ -92,7 +90,7 @@ footer{
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -163,14 +161,67 @@ footer{
 }
 
 #main-text {
-	font-family: 'Google';
+	font-family: 'Google', sans-serif;
+	font-weight: 700;
+	font-size: 1.75rem;
+}
+
+#main-description {
+	font-family: "Google", sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	color: rgb(145, 145, 145);
 	margin-top: 20px;
 }
 
 
-.footer{
-	padding-bottom: 1%;
-	text-align: center;
+.countdown-card {
+    background: rgba(139, 71, 255, 0.1);    
+    border: 2px solid rgb(198, 176, 255); 
+    border-radius: 16px;                       
+    padding: 20px 40px;
+    max-width: 500px;
+    margin: 0 auto; 
+	margin-top:30px;
+    text-align: center;                   
+}
+
+#demo-countdown-text {
+	font-family: 'Google', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	color: rgb(0, 252, 181);
+	
+}
+
+#countdown {
+    font-family: 'Google', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#countdown span {
+    font-weight: bold;
+    color: rgb(175, 128, 255); 
+}
+
+#discordButton {
+	height:100px;
+}
+
+footer{
+	font-family: 'Google', sans-serif;
+	font-weight:bold;
+	padding: 0 5%;
+    width: 100%;
+    height: 50px;
+    background: rgba(112, 80, 217, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 

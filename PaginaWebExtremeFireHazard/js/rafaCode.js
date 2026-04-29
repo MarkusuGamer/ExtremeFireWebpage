@@ -1,4 +1,4 @@
-// Función que hace que la barra de navegación aparezca y desaparezca
+//#region Función que hace que la barra de navegación aparezca y desaparezca
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
 const threshold = 5;
@@ -17,8 +17,9 @@ function navbarScroll() {
 
     lastScroll = currentScroll;
 }
+//#endregion
 
-// Función para el funcionamiento del carrusel de imágenes
+//#region Función para el funcionamiento del carrusel de imágenes
 const track = document.querySelector('.carousel-track');
 const slides = document.querySelectorAll('.carousel-slide');
 const prevBtn = document.getElementById('prevBtn');
@@ -89,12 +90,12 @@ track.addEventListener('transitionend', () => {
 
 nextBtn.addEventListener('click', () => {
     goToSlide(currentIndex + 1);
-    resetAutoPlay();
+    resetCarrouselAutoPlay();
 });
 
 prevBtn.addEventListener('click', () => {
     goToSlide(currentIndex - 1);
-    resetAutoPlay();
+    resetCarrouselAutoPlay();
 });
 
 
@@ -102,23 +103,52 @@ dots.forEach(dot => {
     dot.addEventListener('click', () => {
         const index = parseInt(dot.dataset.index) + 1; 
         goToSlide(index);
-        resetAutoPlay();
+        resetCarrouselAutoPlay();
     });
 });
 
 
-function startAutoPlay() {
+function startCarrouselAutoPlay() {
     autoPlayInterval = setInterval(() => {
         goToSlide(currentIndex + 1);
     }, AUTO_PLAY_TIME);
 }
 
-function resetAutoPlay() {
+function resetCarrouselAutoPlay() {
     clearInterval(autoPlayInterval);
-    startAutoPlay();
+    startCarrouselAutoPlay();
+}
+//#endregion
+
+//#region Función temporizador
+function updateCountdown() {
+    const targetDate = new Date('2026-05-30');
+    const now = new Date();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+        document.getElementById('countdown').innerHTML = "¡El día ha llegado!";
+        return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 }
 
+setInterval(updateCountdown, 1000);
 
+updateCountdown();
+//#endregion
+
+//#region Función al inicio
 function Start() {
-    startAutoPlay();
+    startCarrouselAutoPlay();
 }
+//#endregion
