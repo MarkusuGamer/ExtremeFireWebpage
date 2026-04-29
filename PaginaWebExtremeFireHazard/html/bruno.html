@@ -5,20 +5,19 @@
 		<meta charset="utf-8">
 		<title> EFH Studios - Iru's Dawn </title>
 		<link rel="stylesheet" href="../css/brunoStyle.css">	
-		<script src="js/rafaCode.js" defer></script>	
+		<script src="../js/brunoCode.js" defer></script>	
 	</head>
 	
 	<body onload="Start()" onscroll="navScroll()">
 	
-		<nav class="nav" id="nav">
-			<div class="logo-container">
+		<nav class="nav" id="nav"onmouseover="LowerTitle()" onmouseout="RiseTitle()">
+			<div>
 				<a href="../index.html">
-					<img class="logo" src="../media/img/Bruno/EFH_logo.png" alt="EFH Logo">
+					<img id="logo" src="../media/img/Bruno/EFH_logo.png" alt="EFH Logo">
 				</a>
 			</div>
 			
 			<ul class="links">
-				<li><a href="../index.html">Home</a></li>
 				<li><a href="rafa.html">Snackrifice</a></li>
 				<li><a href="jaime.html">Fishy Business</a></li>          
 				<li><a href="patricia.html">Vlorp Liberation</a></li>
@@ -26,5 +25,23 @@
 			</ul>
 		</nav>
 		
+		<header id="header"> 
+			<div id="title">
+				<p>Iru's Dawn</p>
+			</div>
+		</header>
+		
+		<main>
+			<div>
+				<a href="https://triumvirato-games.itch.io/irus-dawn-game">
+					<img src="../media/img/Marcos/IrusDawn.png" alt="Portada Iru's Dawn" id="irusDawnCover">
+				</a>
+			</div>
+			
+		</main>
+		
+		<footer class="footer">
+			<p> &copy; 2026 Extreme Fire Hazard Studios. All rights reserved. </p>
+		</footer>
 	</body>
 </html>
