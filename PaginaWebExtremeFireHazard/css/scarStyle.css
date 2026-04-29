@@ -5,18 +5,40 @@
 }
 
 
-h1, p{
+h1{
 	text-align: center;
 	color:blue;
+	font-family: 'Michroma'
+}
+p{
+	text-align: center;
+	color:#5488b0;
+	font-family: 'RobotoThin';
 }
 body {
 	margin-top: 70px;	
 	background: linear-gradient(to top,#1621f7,#020878,#000570,#010973,#00065c,#010542,#010436 );
 }
 
+
 nav, section, main, footer{
 	z-index: 1;
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../media/fonts/varias_fuentes/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'RobotoThin';
+    src: url('../media/fonts/varias_fuentes/RobotoMono-ExtraLight.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'Michroma';
+    src: url('../media/fonts/varias_fuentes/Michroma-Regular.ttf') format('truetype');
+}
+
+	
 
 /*VISUALES PARA LA BARRA DE NAVEGACION*/
 .navbar{
@@ -31,7 +53,9 @@ nav, section, main, footer{
 	display: flex;
 	justify-content:space-between;
 	align-items: center;
-	color: white;
+	
+	font-family: 'Roboto';
+
 }
 
 .links{
@@ -42,9 +66,14 @@ nav, section, main, footer{
 }
 
 .links a{
+	text-decoration: none;
 	padding: 8px;
 	font-weight: bold;
 	transition: all 0.3s ease;
+}
+
+.links a:visited{
+	color:blue;
 }
 
 .links a:hover{
@@ -119,10 +148,10 @@ nav, section, main, footer{
 
 .card-info h3 {
     font-size: 1.1 em;
-    color:black;
+    color:white;
     margin-bottom: 2px;
     text-align: center;
-	
+	font-family: 'Roboto';
 }
 
 .card-link{
@@ -143,6 +172,7 @@ nav, section, main, footer{
     text-transform: uppercase;
     margin-bottom: 15px;
     text-align: center;
+	font-family: 'Roboto';
 }
 
 
@@ -150,6 +180,7 @@ nav, section, main, footer{
     font-size: 0.85rem;
     color:#6e6785;
 	text-align: justify;
+	font-family: 'RobotoThin';
 }
 
 
