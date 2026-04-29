@@ -149,6 +149,7 @@ nav, section, main, footer{
 .bio {
     font-size: 0.85rem;
     color:#6e6785;
+	text-align: justify;
 }
 
 
