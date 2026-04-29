@@ -81,7 +81,10 @@ body {
 }
 
 .cta-button {
+	display: block;
     margin-top: 30px;
+	margin-left: 35%;
+	margin-right: 35%;
     padding: 15px 40px;
     background: #ff4500;
     border: none;
@@ -267,8 +270,6 @@ body {
     letter-spacing: 2px;
 }
 
-
-
 .curtain:hover {
     flex: 1.5; 
 }
@@ -276,7 +277,6 @@ body {
 .curtain:hover::before {
     opacity: 1; 
 }
-
 
 .social-curtains:hover .curtain:not(:hover) {
     filter: brightness(0.5);
@@ -325,7 +325,7 @@ body.dancing-mode {
     overflow: hidden;
 }
 
-body.dancing-mode .hero, 
+body.dancing-mode .main-page, 
 body.dancing-mode .navbar, 
 body.dancing-mode .content-section {
     animation: heavyShake 0.5s infinite !important;
