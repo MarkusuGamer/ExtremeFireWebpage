@@ -160,6 +160,11 @@ body {
     background: white;
 }
 
+main{
+	align-items:center;
+}
+
+
 #main-text {
 	font-family: 'Google', sans-serif;
 	font-weight: 700;
@@ -211,6 +216,9 @@ body {
 #discordButton {
 	height:100px;
 }
+
+
+
 
 footer{
 	font-family: 'Google', sans-serif;
