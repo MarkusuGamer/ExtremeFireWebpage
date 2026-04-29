@@ -158,6 +158,9 @@ main{
 	align-items:center;
 }
 
+.game-info{
+	padding-bottom:50px;
+}
 
 #main-text {
 	font-family: 'Google', sans-serif;
