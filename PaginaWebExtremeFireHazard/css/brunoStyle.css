@@ -130,7 +130,7 @@ body
 	
     75%  { transform: scale(1.05) rotate(-3deg); }
 	
-    100% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1) rotate(-2deg); }
 }
 
 .shakeAnim{ 
@@ -162,7 +162,7 @@ body
 #downloadButton:hover
 {
 	color: BlueViolet;
-	max-width: 30vw;
+	max-width: 24vw;
 	background-color: black;
 	border: 5px solid BlueViolet;
 	cursor: pointer;
