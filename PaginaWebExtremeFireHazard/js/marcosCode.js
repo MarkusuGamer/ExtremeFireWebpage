@@ -1,15 +1,16 @@
 var sprite;
 var navbar;
 var isDancing = false;
-
+var interval;
 function start() {
     sprite = document.getElementById('lumb-sprite');
     navbar = document.getElementById('navbar');
 
-    setInterval(triggerPeek, 10000);
+    interval = setInterval(triggerPeek, 10000);
 }
-// 2. Funcion que se activa con el onscroll del body
+//Funcion que se activa con el onscroll del body
 function manageScroll() {
+	// Cambiar NavBar
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
@@ -21,9 +22,11 @@ function manageScroll() {
     reveals.forEach(el => {
         var windowHeight = window.innerHeight;
         var elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
+		
+        if (elementTop < windowHeight - 150) {
             el.classList.add('active');
-        } else{
+        } 
+		else{
 			el.classList.remove('active')
 		}
     });
@@ -31,13 +34,13 @@ function manageScroll() {
     // Parallax del texto principal
     var mainPageText = document.querySelector('.main-page-content');
     if (mainPageText) {
-        let scrollValue = window.scrollY;
+        var scrollValue = window.scrollY;
         mainPageText.style.transform = `translateY(${scrollValue * 0.4}px)`;
         mainPageText.style.opacity = 1 - (scrollValue / 500);
     }
 }
 
-// 3. Funcion que se activa con el onclick del sprite
+//Funcion que se activa con el onclick del sprite
 function lumbParty() {
     isDancing = true;
     
@@ -47,7 +50,9 @@ function lumbParty() {
     sprite.classList.remove('sprite-idle');
     sprite.classList.add('sprite-dance', 'on-stage');
     document.body.classList.add('dancing-mode');
-
+	sprite.style.transform = "scale(10) rotate(0)";
+	clearInterval(interval);
+	
     setTimeout(() => {
         isDancing = false;
         document.body.classList.remove('dancing-mode');
@@ -58,7 +63,7 @@ function lumbParty() {
     }, 3000);
 }
 
-// 4. Funcion de asomarse del lumb
+//Funcion de asomarse del lumb
 function triggerPeek() {
     if (isDancing) return; 
 	
@@ -73,7 +78,7 @@ function triggerPeek() {
     var side = sides[Math.floor(Math.random() * sides.length)];
     var offset = Math.floor(Math.random() * 70) + 15;
 
-    let rotation = 0;
+    var rotation = 0;
     if (side === 'top') { sprite.style.top = '-5px'; sprite.style.left = offset + '%'; rotation = 180; }
     else if (side === 'bottom') { sprite.style.bottom = '-5px'; sprite.style.left = offset + '%'; rotation = 0; }
     else if (side === 'left') { sprite.style.left = '-5px'; sprite.style.top = offset + '%'; rotation = 90; }

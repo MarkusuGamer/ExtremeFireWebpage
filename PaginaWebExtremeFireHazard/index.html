@@ -9,34 +9,38 @@
 	
 <body onload="start()" onscroll="manageScroll()">
 
-	<nav class="navbar" id="navbar">
+    <header>
+		<nav class="navbar" id="navbar">
 	
-        <div class="logo-container">
-			<a href="index.html">
-				<img class="logo" src="media/img/Scar/efhlogo.png" alt="Studio Logo" onclick=>
-			</a>
-        </div>
+			<div class="logo-container">
+				<a href="index.html">
+					<img class="logo" src="media/img/Scar/efhlogo.png" alt="Studio Logo">
+				</a>
+			</div>
 		
-        <ul class="nav-links">
-			<li><a href="html/rafa.html">Snackrifice</a></li>
-            <li><a href="html/bruno.html">Iru's Dawn</a></li>
-            <li><a href="html/jaime.html">Fishy Business</a></li>          
-            <li><a href="html/patricia.html">Patri</a></li>
-			<li><a href="html/scar.html">About Us</a></li>
-        </ul>
+			<ul class="nav-links">
+				<li><a href="html/rafa.html">Snackrifice</a></li>
+				<li><a href="html/bruno.html">Iru's Dawn</a></li>
+				<li><a href="html/jaime.html">Fishy Business</a></li>          
+				<li><a href="html/patricia.html">Patri</a></li>
+				<li><a href="html/scar.html">About Us</a></li>
+			</ul>
 		
-    </nav>
-
-    <header class="main-page">
-		<div class="main-page-content">
-			<h1 class="glitch-text">EXTREME FIRE HAZARD</h1>
-			<p>Forging unforgettable digital experiences.</p>
-			<a class="cta-button" href="html/rafa.html">Explore our Games</a>
-		</div>
+		</nav>
 	</header>
-
-    <main class="content-section">
 	
+    <main class="content-section">
+		
+		<div id="lumb-sprite" class="sprite-idle" onclick="lumbParty()"></div>
+		
+		<div class="main-page">
+			<div class="main-page-content">
+				<h1 class="glitch-text">EXTREME FIRE HAZARD</h1>
+				<p>Forging unforgettable digital experiences.</p>
+				<a class="cta-button" href="html/rafa.html">Explore our Games</a>
+			</div>
+		</div>
+		
         <section class="reveal project-entry">
             <div class="game-card">
                 <div class="image-container">
@@ -78,12 +82,11 @@
                 </div>
             </div>
         </section>
-		
     </main>
     
-    <footer class="footer">
+    <footer class="footer reveal">
 	
-		<section class="social-curtains">
+		<div class="social-curtains">
 			<a href="https://www.youtube.com/channel/UCgI3yYaZ2YPHrAoTfSA9V1A" target="_blank" class="curtain youtube">
 				<div class="curtain-content">
 					<img src="media/img/Marcos/Youtube_icon.png" alt="YouTube" class="social-icon">
@@ -102,17 +105,10 @@
 					<span>LINKEDIN</span>
 				</div>
 			</a>
-		</section>
-		
-		<br>
-		<br>
-		<br>
+		</div>
 		
         <p>&copy; 2026 Extreme Fire Hazard Studios. All rights reserved.</p>
 		
     </footer>
-	
-	<div id="lumb-sprite" class="sprite-idle" onclick="lumbParty()"></div>
-	
 </body>
 </html>

@@ -11,7 +11,7 @@
 
 body {
     font-family: 'OswaldRegular', sans-serif;
-    background-color: #0a0a0a; /* Fallback */
+    background-color: #0a0a0a;
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../media/img/Marcos/fondo.png");
     background-attachment: fixed;
     background-position: center;
@@ -38,7 +38,7 @@ body {
 
 .navbar.scrolled {
     height: 60px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 1);
 }
 
 .logo {
@@ -51,6 +51,7 @@ body {
     gap: 20px;
     list-style: none;
 }
+
 
 .nav-links a {
     text-decoration: none;
@@ -67,11 +68,12 @@ body {
 
 
 .main-page {
-    height: 100vh;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+	margin-bottom: 200px;
 }
 
 .main-page-content h1 {
@@ -207,6 +209,7 @@ body {
     border-top: 2px solid #ff4500;
     border-bottom: 2px solid #ff4500;
     background-color: #000;
+	margin-bottom: 60px;
 }
 
 .curtain {
@@ -218,8 +221,6 @@ body {
     text-decoration: none;
     transition: flex 0.5s ease;
     border-right: 1px solid rgba(255, 69, 0, 0.3);
-    
-
     background-size: cover;
     background-position: center;
 }
@@ -318,7 +319,7 @@ body {
 }
 
 body.dancing-mode {
-    animation: danceFloorOverlay 2s infinite !important;
+    animation: danceFloorOverlay 2s infinite;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -328,7 +329,7 @@ body.dancing-mode {
 body.dancing-mode .main-page, 
 body.dancing-mode .navbar, 
 body.dancing-mode .content-section {
-    animation: heavyShake 0.5s infinite !important;
+    animation: heavyShake 0.5s infinite;
 }
 
 @keyframes heavyShake {
@@ -340,18 +341,18 @@ body.dancing-mode .content-section {
 }
 
 #lumb-sprite.on-stage {
-    opacity: 1 !important;
-    pointer-events: auto;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) scale(10) rotate(0deg) !important;
+	position: fixed;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(10) rotate(0deg);
     z-index: 10001;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .sprite-dance {
     background-image: url('../media/spriteSheets/Lumb_sheet_01_dance.png');
-    animation: danceAnimation 1.2s steps(14) infinite;
+    animation: danceAnimation 2.1s steps(14) infinite;
 }
 
 @keyframes danceAnimation {
