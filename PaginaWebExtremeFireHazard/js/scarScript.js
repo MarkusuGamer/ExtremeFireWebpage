@@ -5,6 +5,8 @@ var logos = ['../media/img/Scar/logo.png','../media/img/Scar/logo2.png','../medi
 
 var index = 0;
 
+
+
 	
 function cambioImg(){
 	if(index===0){
@@ -20,3 +22,12 @@ function cambioImg(){
 }
 
 setInterval(cambioImg, 1000);
+
+
+function savedData(){
+	var name = document.getElementById('name').value;
+	var surname = document.getElementById('surname').value;
+	var email = document.getElementById('email').value;
+	
+	alert("Datos del formulario: \n\n"+"Nombre: "+name+"\n"+"Apellidos: "+surname+"\n"+"Email: "+email+"\n");
+}

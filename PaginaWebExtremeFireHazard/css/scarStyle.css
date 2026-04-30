@@ -228,12 +228,44 @@ form{
 	display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-	gap:30px;
+	gap:20px;
 	padding: 40px;
-	margin-right: 100px;
-	margin-left: 100px;
+	width:40%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
+input{
+	background: rgba(184,217,252,0.2);
+	border: 2px solid blue;
+	border-radius:10px;
+	padding: 5px;
+	width: 220px;
+	height: 20px;
+	color: white;
+	transition: all 0.1s ease;
+}
+input:focus{
+	border: 4px solid blue; 
+    background-color: black;
+   
+}
+
+#email{
+	width: 300px;
+}
+#submit-button{
+	width: 150px;
+	height: 35px;
+	background: rgba(48, 147, 252,1);
+	border: 2px solid blue;
+	transition: all 0.3s ease;
+}
+#submit-button:hover{
+	background: rgba(48, 147, 252,0.5);
+	border: 4px solid rgb(48, 147, 252);
+	font-size: 16px;
+}
 
 
 
