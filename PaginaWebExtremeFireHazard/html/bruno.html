@@ -8,9 +8,9 @@
 		<script src="../js/brunoCode.js" defer></script>	
 	</head>
 	
-	<body onload="Start()" onscroll="navScroll()">
+	<body onload="Start()" onscroll="navScrollHide()">
 	
-		<nav class="nav" id="nav"onmouseover="LowerTitle()" onmouseout="RiseTitle()">
+		<nav class="nav" id="nav" onmouseover="LowerTitle()" onmouseout="RiseTitle()">
 			<div>
 				<a href="../index.html">
 					<img id="logo" src="../media/img/Bruno/EFH_logo.png" alt="EFH Logo">
@@ -33,9 +33,11 @@
 		
 		<main>
 			<div>
-				<a href="https://triumvirato-games.itch.io/irus-dawn-game">
-					<img src="../media/img/Marcos/IrusDawn.png" alt="Portada Iru's Dawn" id="irusDawnCover">
-				</a>
+				<img src="../media/img/Marcos/IrusDawn.png" alt="Portada Iru's Dawn" id="irusDawnCover" onclick="ImageBounce(); NextImage()">
+			</div>
+			
+			<div>
+				<a id="downloadButton" href="../media/build/IrusDawnx86_64.zip" download="IrusDawnx86_64.zip">Download&nbsp;<span id="buildText"> Build</span></a>
 			</div>
 			
 		</main>
