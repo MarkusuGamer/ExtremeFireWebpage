@@ -1,22 +1,22 @@
-@font-face
+@font-face /* Cargo la fuente White Storm, que usaré en el resto del proyecto */
 {
 	font-family: "WhiteStorm";
 	src: url("../media/fonts/whiteStorm/WhiteStorm.otf");
 }
 
-*
+* /* Esto afecta a absolutamente todo */
 {
-	margin: 0;
+	margin: 0; /* Quito los márgenes y los padding para que se vea igual en todos los navegadores, sin bordes o espacios raros */
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: border-box; /* Para trabajar con las dimensiones de las cosas más fácilmente */
 }
 
 
-.nav {
-    position: fixed; 
-    top: 0;           
-    z-index: 1000;    
-    display: flex;
+.nav { /* Para la barra de navegación superior */
+    position: fixed; /* Mantiene la barra siempre arriba de la página aunque haga scroll. */
+    top: 0;  /* Lo ancla arriba del todo */        
+    z-index: 1000;   /* Hace que se renderice encima de todo el resto de cosas */ 
+    display: flex; /* Lo convierte en flex container (para usar flexbox) */
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
@@ -82,19 +82,47 @@
 	padding-top: 110px;
 	padding-bottom: 15px;
 	font-family: WhiteStorm;
-	font-size: 12vh;
-	color: white;
 	text-align: center;
 	transition: all 0.5s ease;
 }
 
 #title
 {
-	transition: all 1s ease;
-	transform: scale(1);
+	color:white;
 	text-shadow: 2px 2px 15px #000000;
+	
+	transition: transform 0.5s ease, shadow 0.5s ease, padding 0.5s ease;
 }
 
+#title:hover
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#iru /* Establece los tamaños y espaciado de letra de la palabra "Iru" (título) */
+{
+	font-size: 7vh;
+	letter-spacing: 0.2rem;
+	transition: font-size 0.25s ease,  letter-spacing 1s ease;
+}
+#iru:hover /* Hace que la palabra se agrande y se separen las letras al hacer hover con el ratón */
+{
+	font-size: 9vh;
+	letter-spacing: 1rem;
+}		
+#dawn /* Establece los tamaños y espaciado de letra de la palabra "Dawn" (título) */
+{
+	font-size: 11vh;
+	letter-spacing: 0.2rem;
+	transition: font-size 0.25s ease,  letter-spacing 1s ease, padding 0.5s ease;
+}	
+#dawn:hover /* Hace que la palabra se agrande y se separen las letras al hacer hover con el ratón. También  */
+{
+	font-size: 13vh;
+	letter-spacing: 1rem;
+	padding-bottom: 15px;
+}	
 
 body
 {
@@ -105,7 +133,11 @@ body
 	background-position: center;
 }
 
-#irusDawnCover{
+#page-intro
+{
+	
+}
+#cover{
 	display: block;
 	margin: auto;
 	width: 100vh;
@@ -113,9 +145,10 @@ body
 	border-radius: 30px;
 	cursor: pointer;
 	border: 5px solid transparent;
+	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0); /* Precalculo la sombra de forma transparente para que no tenga que recalcular en el hover. */
 	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }	
-#irusDawnCover:hover{
+#cover:hover{
     transform: rotate(-2deg);
 	border: 5px solid violet;
 	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.8);
@@ -145,11 +178,11 @@ body
 	font-size: 5vh;
 	color: white;
 	display: flex;
-	justify-content: center;
+	align-items: center;
+    justify-content: center;
 	max-width: 20vw;
     margin: 0 auto; 
 	margin-top:30px;
-    text-align: center;   
 	padding-top: 1%;
 	padding-bottom: 1%;
 	background-color: rgba(0, 0, 0, 0.5);

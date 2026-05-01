@@ -17,7 +17,7 @@ function Start()
 	navbar = document.getElementById('nav'); //Referencia a la barra de navegación
     title = document.getElementById('header'); //referencia al título
     logo = document.getElementById('logo'); //Referencia al logo (icono EFH)
-    display = document.getElementById('irusDawnCover'); //Referencia a la foto principal
+    display = document.getElementById('cover'); //Referencia a la foto principal
     
     display.addEventListener('animationend', () => {display.classList.remove('shakeAnim');});  
     
@@ -26,7 +26,7 @@ function Start()
 
 function navScrollHide() //Esta función se encarga de ocultar la barra de navegación cuando scrolleas hacia abajo
 {
-    if (window.scrollY > 50) //si tu variable de scroll vertical es mínima
+    if (window.scrollY > 20) //si tu variable de scroll vertical es mínima
     {
         navbar.classList.add('scrolled'); //Se añade esta clase que oculta la navbar.
     } 
@@ -60,8 +60,7 @@ function RiseTitle() //Esta función sube el título cuando el navbar se hace ch
 
 function ImageBounce() //Esta función se encarga de animar el rebote de la imagen central de la página
 {
-	var img = document.getElementById('irusDawnCover'); //Obtiene la imágen central de Iru's Dawn
-    img.classList.add("shakeAnim"); //Añade la clase a través de la cual se animan (css)
+    display.classList.add("shakeAnim"); //Añade la clase a través de la cual se animan (css)
     setTimeout(() => img.classList.remove("shakeAnim"), 500); //Se la quita tras un timeout de medio segundo
 }
 
