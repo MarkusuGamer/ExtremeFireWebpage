@@ -8,7 +8,7 @@
 		<script src="../js/brunoCode.js" defer></script>	
 	</head>
 	
-	<body onload="Start()" onscroll="navScrollHide()">
+	<body onload="Start()" onscroll="navScrollHide(); ArrowVisibility()">
 	
 		<nav class="nav" id="nav" onmouseover="LowerTitle()" onmouseout="RiseTitle()">
 			<div>
@@ -33,25 +33,49 @@
 		
 		<main>
 		
+			<section id="arrow-button" onclick="GoToTop()">
+				<img src="../media/img/Bruno/upwardsArrow.png" alt="Upwards Arrow Button">
+			</section>
+		
 			<section class="pitch">
 				<img src="../media/img/Marcos/IrusDawn.png" alt="Portada Iru's Dawn" id="cover" onclick="ImageBounce(); NextImage()">
 				
 				<img src="../media/img/Bruno/divider.png" alt="Divisor Decoration Line" class="divisor-line">
 				
 				<div id="catchphrase"> 
-					<p> The <span class="pitch-text-highlight"> prototype </span> that <span class="pitch-text-highlight">forged us </span> </p>
+					<p> The <span class="pink-highlight"> prototype </span> that <span class="pink-highlight">forged us </span> </p>
 				</div>
 				
 				<div id="short-description"> 
-					<p> A sci-fi <span class="pitch-text-highlight">roguelite</span> about an omniscient <span class="pitch-text-highlight">parasite</span>.</p>
-					<p> Save the planet <span class="pitch-text-highlight"> Iru </span> from its influence...</p>
-					<p> ...or infect everything in your path.</p>
+					<p> A sci-fi <span class="pink-highlight">roguelite</span> about an omniscient <span class="pink-highlight">parasite</span>.</p>
+					<p> <span class="pink-highlight">Save</span> the planet <span class="pink-highlight"> Iru </span> from its influence...</p>
+					<p> ...or <span class="pink-highlight">infect everything</span> in your path.</p>
 				</div>
 				
 				<img src="../media/img/Bruno/divider.png" alt="Divisor Decoration Line" class="divisor-line">
 			</section>
 			
-			<a id="downloadButton" href="../media/build/IrusDawnx86_64.zip" download="IrusDawnx86_64.zip">Download&nbsp;<span id="buildText"> Build</span></a>
+			
+			<section id="card-1">
+			<img src="../media/img/Bruno/concept.png" alt="First Iru's Dawn Concept">
+			
+			
+			</section>
+			
+			<section id="card-2">
+			<img src="../media/img/Bruno/progress.png" alt="Iru's Dawn Pixel Art Progress Example">
+			</section>
+			
+			<section id="card-3">
+			<img src="../media/img/Bruno/mystery.png" alt="Iru's Dawn Strange Narrative Mystery Screenshot">
+			
+			</section>
+			
+			<section id="download-section">
+				<img src="../media/img/Bruno/divider.png" alt="Divisor Decoration Line" class="divisor-line">
+				<a id="downloadButton" href="../media/build/IrusDawnx86_64.zip" download="IrusDawnx86_64.zip">Download&nbsp;<span id="buildText"> Build</span></a>
+				<img src="../media/img/Bruno/divider.png" alt="Divisor Decoration Line" class="divisor-line">
+			</section>
 		
 		</main>
 		

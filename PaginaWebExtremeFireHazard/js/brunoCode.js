@@ -2,6 +2,7 @@
 var navBar; //Referencia a la barra de navegación
 var title; //referencia al título
 var logo; //Referencia al logo de la navbar (el icono de EFH con el fueguito)
+var arrow; //Referencia al botón de subir a arriba de la página.
 
 var images = ["../media/img/Marcos/IrusDawn.png", 
 				"../media/img/Bruno/Iru_1.webp",
@@ -18,6 +19,7 @@ function Start()
     title = document.getElementById('header'); //referencia al título
     logo = document.getElementById('logo'); //Referencia al logo (icono EFH)
     display = document.getElementById('cover'); //Referencia a la foto principal
+	arrow = document.getElementById('arrow-button');
     
     display.addEventListener('animationend', () => {display.classList.remove('shakeAnim');});  
     
@@ -62,6 +64,15 @@ function ImageBounce() //Esta función se encarga de animar el rebote de la imag
 {
     display.classList.add("shakeAnim"); //Añade la clase a través de la cual se animan (css)
     setTimeout(() => img.classList.remove("shakeAnim"), 500); //Se la quita tras un timeout de medio segundo
+}
+
+function ArrowVisibility()
+{
+	if (window.scrollY > 300) {
+    arrow.classList.add('visible');
+  } else {
+    arrow.classList.remove('visible');
+	}
 }
 
 function GoToTop() //esta función hace que, al dar a un botón, puedas subir a la parte de arriba de la página automáticamente.

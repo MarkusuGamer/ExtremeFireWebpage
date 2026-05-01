@@ -77,13 +77,59 @@
 
 }
 
-#header
+#arrow-button /*Esto establece el botón de "subir arriba"*/
+{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 0.2rem solid white;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  
+  /*Esto hace que el botón sea invisible al inicio*/
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  
+  z-index: 2000;
+}
+#arrow-button.visible /*Esta clase se añade cuando el scroll es superior a 300*/
+{
+	/*Le devuelve la opacidad y hace que sea visible. Además lo mueve un poco arriba. Como hay transición, lo hace de forma progresiva*/
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#arrow-button:hover /*Cambia los colores del botón cuando pasas el mouse por encima*/
+{
+	background-color: black;
+	border: 0.2rem solid BlueViolet;
+}
+#arrow-button img /*Centra la foto de la flecha dentro del botón como tal*/
+{
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+
+#header /*Centra el header (título del juego) y le establece la fuente y las transiciones*/
 {
 	padding-top: 110px;
 	padding-bottom: 15px;
 	font-family: WhiteStorm;
 	text-align: center;
-	transition: all 0.5s ease;
+	transition: padding 0.5s ease; /*Para cuando sube / baja dependiendo de la función RiseTitle (JavaScript)*/
 }
 
 #title
@@ -165,6 +211,8 @@ body
     75%  { transform: scale(1.05) rotate(-3deg); }
 	
     100% { transform: scale(1) rotate(-2deg); }
+	
+	/*Esta es la animación de agitarse de la imagen principal (la que se puede cambiar haciendo click*/
 }
 
 .shakeAnim{ 
@@ -181,7 +229,6 @@ body
 	font-family: WhiteStorm;
 	color:white;
 	text-shadow: 2px 2px 7px #000000;
-	
 }
 
 .pitch:hover{
@@ -191,13 +238,15 @@ body
 #catchphrase
 {
 	font-size: 3em;
+	letter-spacing: 0.13rem;
 }
 #short-description
 {
-	font-size: 1.55em;
+	font-size: 1.8em;
+	letter-spacing: 0.1rem;
 }
 
-.pitch-text-highlight
+.pink-highlight
 {
 	color: #ffb6ff;
 	text-shadow: 3px 3px 5px #000000;
@@ -212,8 +261,6 @@ body
 	width: 50vh;
     height: auto;
 }
-
-	
 
 #downloadButton
 {
