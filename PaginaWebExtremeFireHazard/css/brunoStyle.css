@@ -133,10 +133,7 @@ body
 	background-position: center;
 }
 
-#page-intro
-{
-	
-}
+
 #cover{
 	display: block;
 	margin: auto;
@@ -169,6 +166,34 @@ body
 .shakeAnim{ 
 	animation: shakeAnimation 0.35s ease-in-out;
 }
+
+
+.pitch
+{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-flow: column wrap;
+	font-family: WhiteStorm;
+	color:white;
+	text-shadow: 2px 2px 7px #000000;
+}
+
+#catchphrase
+{
+	font-size: 7vh;
+}
+#short-description
+{
+	font-size: 3vh;
+}
+.pitch-text-highlight
+{
+	color: #ffb6ff;
+	text-shadow: 3px 3px 5px #000000;
+}
+
 	
 
 #downloadButton
