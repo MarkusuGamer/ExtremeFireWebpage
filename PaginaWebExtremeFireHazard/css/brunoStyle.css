@@ -313,6 +313,24 @@ body
 	color: violet;
 }
 
+#download-text
+{
+	font-family: WhiteStorm;
+	color: white;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	text-shadow: 3px 3px 5px #000000;
+	font-size: 5vh;
+	letter-spacing: 0.1rem;
+	transition: letter-spacing 1s ease, font-size 0.3s ease;
+}
+#download-text:hover
+{
+	letter-spacing: 0.5rem;
+	font-size: 6vh;
+}	
+
 #downloadButton
 {
 	text-decoration: none;
