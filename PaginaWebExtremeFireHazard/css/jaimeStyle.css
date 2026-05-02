@@ -1,0 +1,55 @@
+/*CSS*/
+body{
+	background-image: url("../media/img/Jaime/background.png");
+}
+#sideNav{
+	with: 200px;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	background: #f7dabe;
+	z-index: 1;
+	transition: 0.5s;
+}
+ul{
+	margin-top: 80px;
+}
+li{
+	list-style: none;
+	margin: 10px 60px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color:cyan;
+}
+#boton{
+	width: 50px;
+	height: 50px;
+	background: #f7dabe;
+	text-align: center;
+	position: fixed;
+	left: 30px;
+	top: 20px;
+	border-radius:3px;
+	z-index: 2;
+	cursor: pointer;
+	display: block;
+}
+img{
+	with: 20px;
+	margin-top: 2px;
+}
+#fish{
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	position: fixed;
+	background: #f7dabe;
+}
+img{
+	with: 10px;
+	margin-left: 0px;
+}
