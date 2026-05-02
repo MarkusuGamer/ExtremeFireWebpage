@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Google';
-    src: url('../media/fonts/google/static/GoogleSansFlex.ttf') format('truetype');
+    src: url("../media/fonts/google/GoogleSansFlex.ttf") format('truetype');
 }
 
 * {
@@ -11,16 +11,21 @@
 
 
 body {
-    font-family: 'Google';
     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 50%, rgba(36, 15, 66, 1) 100%);
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     color: white;
     overflow-x: hidden;
 	padding-top: 120px;
+
 }
 
+.content-section{
+	
+	display:flex;
+	align-items: center;
+	flex-direction: column;
+}
 
 .navbar {
     position: fixed; 
@@ -156,22 +161,41 @@ body {
 
 .game-info{
 	padding-bottom:50px;
+	align-items: center;
+    justify-content: center;
+    text-align: center;	
+	margin: 0 auto;
+	font-family: "Google", sans-serif;
 }
 
 #main-text {
-	font-family: 'Google', sans-serif;
-	font-weight: 700;
-	font-size: 1.75rem;
+	font-weight: 900;
+	font-size: 2rem;
+	color: rgb(169, 116, 255);
 }
 
 #main-description {
-	font-family: "Google", sans-serif;
-	font-weight: 500;
-	font-size: 1rem;
-	color: rgb(145, 145, 145);
+	font-weight: 700;
+	font-size: 1.25rem;
+	color: white;
 	margin-top: 5px;
+	width:60%;
+	margin: auto;
 }
 
+.lesser-description {
+	font-weight: 500;
+	font-size: 1.1rem;
+	color: rgb(145, 145, 145);
+	margin-top: 5px;
+	width:60%;
+	margin: auto;
+}
+
+.colored-text{
+	color: rgb(168, 115, 255);
+	
+}
 
 .countdown-card {
     background: rgba(139, 71, 255, 0.1);    
@@ -206,15 +230,25 @@ body {
     color: rgb(175, 128, 255); 
 }
 
+#discord-text{
+	padding:25px 0;
+	font-weight:700;
+	font-size: 1.5rem;
+	color: white;
+}
+
 #discordButton {
 	height:100px;
 }
 
-.game-info{
-	
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+a{
+	text-decoration:none;
+	color: rgb(202, 170, 255);
+	transition: color 300ms ease;
+	font-weight:bold;
+}
+a:hover{
+	color: rgb(131, 55, 255);
 }
 
 
