@@ -5,7 +5,7 @@ var logos = ['../media/img/Scar/logo.png','../media/img/Scar/logo2.png','../medi
 
 var index = 0;
 
-
+var cards = document.querySelectorAll(".card");
 
 	
 function cambioImg(){
@@ -31,3 +31,20 @@ function savedData(){
 	
 	alert("Datos del formulario: \n\n"+"Nombre: "+name+"\n"+"Apellidos: "+surname+"\n"+"Email: "+email+"\n");
 }
+
+
+
+
+
+//var cards = document.querySelectorAll(".card");
+//cards.forEach((card) => {
+  //card.addEventListener("mousemove", (e) => {
+    //var rect = card.getBoundingClientRect();
+    //var rotateX = ((e.clientY - rect.top) / rect.height - 0.5) * -30;
+    //var rotateY = ((e.clientX - rect.left) / rect.width - 0.5) * 30;
+    //card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  //});
+  //card.addEventListener("mouseleave", () => {
+    //card.style.transform = "rotateX(0) rotate(0)";
+  //});
+//});

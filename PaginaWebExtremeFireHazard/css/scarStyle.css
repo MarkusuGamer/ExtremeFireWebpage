@@ -87,6 +87,11 @@ nav, section, main, footer{
 }
 
 /*VISUALES PARA LA SECCION DE QUIENES SOMOS*/
+#about-gift{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 #about{
 	width: 100%;
 	background: rgba(184, 202, 252, 0.3);
@@ -97,6 +102,7 @@ nav, section, main, footer{
 	margin-left: auto;
     margin-right: auto;
 	padding-bottom:25px;
+	font-size: 1.2em; 
 }
 #about h1{
 	background: black;
@@ -105,12 +111,23 @@ nav, section, main, footer{
 	margin-left: auto;
     margin-right: auto;
 }
+.about-imgs{
+	display: flex;
+	justify-content:center;
+	width: 100%;
+	height:200px;
+	gap: 3em;
+	margin-top: 3.5em;
+	margin-bottom: 3.5em;
+}
+.about-imgs img{
+	border-radius: 50%
+}
 
 /*NUESTRA HISTORIA*/
 #historia{
 	width: 100%;
 	background: rgba(184, 202, 252, 0.3);
-	
 }
 #historia p{
 	margin-top:25px;
@@ -118,6 +135,7 @@ nav, section, main, footer{
 	margin-left: auto;
     margin-right: auto;
 	padding-bottom:25px;
+	font-size: 1.2em; 
 }
 #historia h1{
 	background: black;
@@ -126,6 +144,49 @@ nav, section, main, footer{
 	margin-left: auto;
     margin-right: auto;
 }
+.historia-imgs{
+	display: flex;
+	justify-content:center;
+	width: 100%;
+	height:200px;
+	gap: 3em;
+	margin-top: 3.5em;
+	margin-bottom: 1em;
+}
+#large-img{
+	width: 70em;
+}
+#flip-img{
+	transform: scale(-1,1)
+}
+
+/*EVENTOS DE VIDEOJUEGOS*/
+
+.eventos-imgs{
+	display: flex;
+	justify-content:center;
+	width: 100%;
+	height:300px;
+	gap: 3em;
+	margin-top: 3.5em;
+	margin-bottom: 1em;
+}
+
+.eventos-imgs img{
+	border-radius:25px;
+}
+.eventos-imgs video{
+	border-radius:25px;
+}
+
+#eventos{
+	background: black;
+	border-radius: 25px;
+	width:30%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*MIEMBROS DEL EQUIPO*/
 #team{
@@ -154,6 +215,28 @@ nav, section, main, footer{
 	display: flex;
 	flex-direction: column;
 	
+}
+
+.card:hover{
+	animation: border-colors 1s infinite;
+}
+
+@keyframes border-colors{
+	0%{
+		border-color: blue;
+	}
+	25%{
+		border-color: #7d48e8;
+	}
+	50%{
+		border-color: #c5ccdb;
+	}
+	75%{
+		border-color: #7d48e8;
+	}
+	100%{
+		border-color: blue;
+	}
 }
 
 .card-img{
@@ -233,6 +316,16 @@ form{
 	width:40%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+#form h1{
+	
+	background: black;
+	border-radius: 25px;
+	width:40%;
+	margin-left: auto;
+    margin-right: auto;
+
 }
 
 input{
