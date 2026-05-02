@@ -72,7 +72,7 @@ body {
 }
 
 
-.main-page {
+.carousel-holder {
     height: 75vh;
     display: flex;
     align-items: center;
@@ -152,10 +152,6 @@ body {
 
 .dot.active {
     background: white;
-}
-
-main{
-	align-items:center;
 }
 
 .game-info{

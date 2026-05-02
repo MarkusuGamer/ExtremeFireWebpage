@@ -1,11 +1,11 @@
 //#region Función que hace que la barra de navegación aparezca y desaparezca
-const navbar = document.getElementById('navbar');
-let lastScroll = 0;
-const threshold = 5;
+var navbar = document.getElementById('navbar');
+var lastScroll = 0;
+var threshold = 5;
 
 function navbarScroll() {
-    const currentScroll = window.scrollY;
-    const difference = Math.abs(currentScroll - lastScroll);
+    var currentScroll = window.scrollY;
+    var difference = Math.abs(currentScroll - lastScroll);
 
     if (difference < threshold) return;
 
@@ -20,21 +20,21 @@ function navbarScroll() {
 //#endregion
 
 //#region Función para el funcionamiento del carrusel de imágenes
-const track = document.querySelector('.carousel-track');
-const slides = document.querySelectorAll('.carousel-slide');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const dots = document.querySelectorAll('.dot');
+var track = document.querySelector('.carousel-track');
+var slides = document.querySelectorAll('.carousel-slide');
+var prevBtn = document.getElementById('prevBtn');
+var nextBtn = document.getElementById('nextBtn');
+var dots = document.querySelectorAll('.dot');
 
-const totalSlides = slides.length;
-const AUTO_PLAY_TIME = 4000;
-let currentIndex = 1; // 👈 Empieza en 1 porque el índice 0 es el clon
-let autoPlayInterval;
-let isTransitioning = false;
+var totalSlides = slides.length;
+var AUTO_PLAY_TIME = 4000;
+var currentIndex = 1; // 👈 Empieza en 1 porque el índice 0 es el clon
+var autoPlayInterval;
+var isTransitioning = false;
 
 
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[totalSlides - 1].cloneNode(true);
+var firstClone = slides[0].cloneNode(true);
+var lastClone = slides[totalSlides - 1].cloneNode(true);
 
 firstClone.classList.add('clone');
 lastClone.classList.add('clone');
@@ -122,19 +122,19 @@ function resetCarrouselAutoPlay() {
 
 //#region Función temporizador
 function updateCountdown() {
-    const targetDate = new Date('2026-05-30');
-    const now = new Date();
-    const difference = targetDate - now;
+    var targetDate = new Date('2026-06-30');
+    var now = new Date();
+    var difference = targetDate - now;
 
     if (difference <= 0) {
         document.getElementById('countdown').innerHTML = "¡El día ha llegado!";
         return;
     }
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     document.getElementById('days').textContent = String(days).padStart(2, '0');
     document.getElementById('hours').textContent = String(hours).padStart(2, '0');
