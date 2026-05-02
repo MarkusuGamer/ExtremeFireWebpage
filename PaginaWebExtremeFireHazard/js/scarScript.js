@@ -5,9 +5,9 @@ var logos = ['../media/img/Scar/logo.png','../media/img/Scar/logo2.png','../medi
 
 var index = 0;
 
-var cards = document.querySelectorAll(".card");
 
-	
+
+//funcion para la animacion del logo	
 function cambioImg(){
 	if(index===0){
 		index=1;
@@ -24,6 +24,7 @@ function cambioImg(){
 setInterval(cambioImg, 1000);
 
 
+//funcion para guardar datos del formulario
 function savedData(){
 	var name = document.getElementById('name').value;
 	var surname = document.getElementById('surname').value;
@@ -32,19 +33,44 @@ function savedData(){
 	alert("Datos del formulario: \n\n"+"Nombre: "+name+"\n"+"Apellidos: "+surname+"\n"+"Email: "+email+"\n");
 }
 
+//
+var fondo = document.getElementById("fondo");
+var particulas = document.querySelectorAll(".particles");
+var colorAcelerado = "purple"; 
+var colorNormal = "blue";
+var velocidadesOriginales = [];
+
+for (var i = 0; i < particulas.length; i++) {
+    var duracion = window.getComputedStyle(particulas[i]).animationDuration;
+    velocidadesOriginales.push(parseFloat(duracion));
+}
+
+document.addEventListener("mousedown",acelerar);
+document.addEventListener("mouseup",normal);
+
+function acelerar() {
+
+    var velocidad;
+
+    for (var i = 0; i < particulas.length; i++) {
+		var nuevaVelocidad = velocidadesOriginales[i] / 4;
+        particulas[i].style.animationDuration = nuevaVelocidad + "s";
+		particulas[i].style.background = colorAcelerado;
+    }
+}
+
+function normal() {
+
+    for (var i = 0; i < particulas.length; i++) {
+        // Volvemos a la velocidad original
+        particulas[i].style.animationDuration = velocidadesOriginales[i] + "s";
+		particulas[i].style.background = colorNormal;
+    }
+
+}
+
+//
 
 
 
 
-//var cards = document.querySelectorAll(".card");
-//cards.forEach((card) => {
-  //card.addEventListener("mousemove", (e) => {
-    //var rect = card.getBoundingClientRect();
-    //var rotateX = ((e.clientY - rect.top) / rect.height - 0.5) * -30;
-    //var rotateY = ((e.clientX - rect.left) / rect.width - 0.5) * 30;
-    //card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  //});
-  //card.addEventListener("mouseleave", () => {
-    //card.style.transform = "rotateX(0) rotate(0)";
-  //});
-//});

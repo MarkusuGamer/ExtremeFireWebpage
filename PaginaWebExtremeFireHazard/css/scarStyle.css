@@ -38,12 +38,10 @@ nav, section, main, footer{
     src: url('../media/fonts/varias_fuentes/Michroma-Regular.ttf') format('truetype');
 }
 
-	
 
 /*VISUALES PARA LA BARRA DE NAVEGACION*/
 .navbar{
 	background:black;
-	/*valores para que la barra se quede arriba*/
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -56,6 +54,9 @@ nav, section, main, footer{
 	
 	font-family: 'Roboto';
 
+}
+#this-page{
+	color: white;
 }
 
 .links{
@@ -423,19 +424,6 @@ input:focus{
       opacity: 0;
 	  
 	  animation: upParticles linear infinite;
-}
-.particles-big{
-	  position: absolute;
-      bottom: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #4049ff;
-      
-      opacity: 0;
-	  
-	  animation: upParticles linear infinite;
-	  
 }
 
 	.particles:nth-child(1) { left: 2%; animation-duration: 3s; animation-delay: 0s; }
