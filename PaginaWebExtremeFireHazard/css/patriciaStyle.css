@@ -19,13 +19,19 @@
 	display: flex;
 	justify-content: space-between; /*Separar los elementos*/
 	align-items: center;
-	padding: 0 2;
+	padding: 0 2%;
 	overflow: visible;
 	width: 100%; /*Hace que el navbar ocupe todo el ancho de la pantalla*/
 	height: 60px;
 	background: rgba(163, 42, 163, 0.8);
 	transition: all 0.5s ease;
 	
+}
+
+.nav.scrolled
+{
+	transform: translateY(-100%); /*Mueve la navbar hacia arriba hasta que desaparece*/
+	transition: all 0.5s ease;
 }
 
 #logo
@@ -114,11 +120,11 @@ body
 
 #description
 {
-	font-family: new times roman;
+	font-family: evil_empire;
 	font-size: 1.25rem;
 	font-weight: 700;
 	text-shadow: 5px 5px 15px black;
-	color: rgb(221, 181, 232, 0.8);
+	color: rgb(248, 227, 250, 0.8);
 	margin-bottom: 30px;
 }
 
@@ -135,11 +141,11 @@ body
 
 #last-sentence
 {
-	font-family: new times roman;
+	font-family: evil_empire;
 	font-size: 1.25rem;
 	font-weight: 700;
 	text-shadow: 5px 5px 15px black;
-	color: rgb(221, 181, 232, 0.8);
+	color: rgb(248, 227, 250, 0.8);
 	margin-bottom: 80px;
 }
 
