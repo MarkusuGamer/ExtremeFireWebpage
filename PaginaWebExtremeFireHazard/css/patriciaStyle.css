@@ -1,0 +1,212 @@
+@font-face /*Cargar la fuente*/
+{
+    font-family: 'Amoria';
+    src: url("../media/fonts/amoria/AMORIA.otf");
+}
+
+/*Quitar el margin y el padding*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.nav /*Barra de navegación*/
+{
+	position: fixed; /*Para mantener la barra de navegación siempre arriba en la página*/
+	top: 0; /*Se ancla el navbar a la parte superior de la pantalla*/
+	z-index: 9999; /*Controla que se ve por encima de otros*/
+	display: flex;
+	justify-content: space-between; /*Separar los elementos*/
+	align-items: center;
+	padding: 0 2;
+	overflow: visible;
+	width: 100%; /*Hace que el navbar ocupe todo el ancho de la pantalla*/
+	height: 60px;
+	background: rgba(163, 42, 163, 0.8);
+	transition: all 0.5s ease;
+	
+}
+
+#logo
+{
+	height: 50px;
+	margin-left: 20px;
+}
+
+.nav-links
+{
+	display: flex;
+	gap: 5px; /*Espacio de 20 píxeles entre cada enlace*/
+	list-style: none; /*Elimina los puntos por defecto que pone <ul>*/
+	font-family: 'Amoria';
+	font-size: 14px;
+}
+
+.nav-links a
+{
+	text-decoration: none; /*Elimina el subrayado por defecto que tienen los enlaces*/
+	color: #D7D1E3;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold; /*Pone el texto en negrita*/
+	padding: 6px 13px;
+	transition: transform 0.5s ease; /*Cualquier cambio o posición del enlace se hace con una animación suave de 0.5 segundos*/
+	display: inline-block; /*Para que se le pueda aplicar bien el padding*/
+}
+
+#title
+{
+	align-items: center; /*Centrado vertical*/
+	justify-content: center; /*Centrado horizontal*/
+	text-align: center; /*Centra el texto dentro del elemento*/
+	margin-top: 100px;
+	margin-bottom: 70px;
+	font-family: 'Amoria';
+	font-size: 6rem;
+	color: rgb(108, 41, 108, 0.8)
+	
+}
+
+.foto-portada 
+{
+    display: flex;
+    justify-content: center;
+	margin-bottom: 80px;
+}
+}
+
+body
+{
+	background-image: url("../media/img/Patricia/fondo.png"); /*Imagen de fondo*/
+	background-repeat: no-repeat; /*Para que la imagen no se repita*/
+	background-attachment: fixed; /*Para que el fondo se quede fijo*/
+	background-size: cover; /*Para que la imagen del fondo cubra toda la página*/
+	background-position: center; /*Centra la imagen*/
+	padding-top: 70px;
+	background-color: transparent;
+}
+
+.game-info
+{
+	padding-bottom: 40px;
+	align-items: center; /*Centrado vertical*/
+	justify-content: center; /*Centrado horizontal*/
+	text-align: center; /*Centra el texto dentro del elemento*/
+	margin: 0;
+	background-color: transparent;
+	
+}
+
+#main-text
+{
+	font-family: 'Amoria';
+	font-size: 2rem;
+	font-weight: 900;
+	color: rgb(198, 145, 198, 0.8);
+	margin-bottom: 30px;
+}
+
+#description
+{
+	font-family: new times roman;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: rgb(198, 145, 198, 0.8);
+	margin-bottom: 30px;
+}
+
+#sentence-motivation
+{
+	font-family: evil_empire;
+	font-weight: bold; /*Pone el texto en negrita*/
+	font-size: 2.75rem;
+	font-weight: 700;
+	color: rgb(198, 145, 198, 0.8);
+	margin-bottom: 30px;
+}
+
+#last-sentence
+{
+	font-family: new times roman;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: rgb(198, 145, 198, 0.8);
+	margin-bottom: 80px;
+}
+
+#build-section
+{
+	padding-bottom: 40px;
+	align-items: center; /*Centrado vertical*/
+	justify-content: center; /*Centrado horizontal*/
+	text-align: center; /*Centra el texto dentro del elemento*/
+	margin: 0;
+}
+
+#download-text
+{
+	font-family: evil_empire;
+	color: rgb(198, 145, 198, 0.8);
+	font-weight: bold; /*Pone el texto en negrita*/
+	text-transform: uppercase;
+	font-size: 1.25rem;
+}
+
+#downloadbutton 
+{
+    font-family: 'Amoria';
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(198, 145, 198, 0.8);
+    font-size: 1.25rem;
+}
+
+#itchio 
+{
+    display: flex;
+    justify-content: center;
+}
+
+#itchio img 
+{
+    width: 200px;
+    cursor: pointer; /*Muestra la mano al pasar el ratón*/
+}
+
+#itchio img:hover 
+{
+    opacity: 0.8; /*Se vuelve un poco transparente al pasar el ratón*/
+}
+
+.purple-highlight
+{
+	color: #7D4791;
+}
+
+footer
+{
+	font-family: 'Amoria';
+	font-weight: bold; /*Pone el texto en negrita*/
+	display: flex;
+	margin-top: 200px; /*Para que se ponga abajo del todo*/
+	justify-content: center;
+	align-items: center;
+	padding: 0 2%;
+	width: 100%; /*Hace que ocupe todo el ancho de la página*/
+	height: 45px;
+	background: rgba(163, 42, 163, 0.8);
+	
+}
+
+.footer a
+{
+	text-decoration: none; /*Elimina el subrayado por defecto que tienen los enlaces*/
+	color: #D7D1E3;
+	font-size: 15px;
+	font-weight: bold; /*Pone el texto en negrita*/
+	font-family: new times roman;
+	padding: 6px 13px;
+	transition: transform 0.5s ease; /*Cualquier cambio o posición del enlace se hace con una animación suave de 0.5 segundos*/
+	display: inline-block; /*Para que se le pueda aplicar bien el padding*/
+}
