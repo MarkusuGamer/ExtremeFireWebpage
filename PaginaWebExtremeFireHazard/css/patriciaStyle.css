@@ -64,6 +64,7 @@
 	margin-bottom: 70px;
 	font-family: 'Amoria';
 	font-size: 6rem;
+	text-shadow: 2px 2px 10px black;
 	color: rgb(108, 41, 108, 0.8)
 	
 }
@@ -76,6 +77,10 @@
 }
 }
 
+* {
+    background-color: transparent;
+}
+
 body
 {
 	background-image: url("../media/img/Patricia/fondo.png"); /*Imagen de fondo*/
@@ -84,7 +89,6 @@ body
 	background-size: cover; /*Para que la imagen del fondo cubra toda la página*/
 	background-position: center; /*Centra la imagen*/
 	padding-top: 70px;
-	background-color: transparent;
 }
 
 .game-info
@@ -103,6 +107,7 @@ body
 	font-family: 'Amoria';
 	font-size: 2rem;
 	font-weight: 900;
+	text-shadow: 2px 2px 10px black;
 	color: rgb(198, 145, 198, 0.8);
 	margin-bottom: 30px;
 }
@@ -112,6 +117,7 @@ body
 	font-family: new times roman;
 	font-size: 1.25rem;
 	font-weight: 700;
+	text-shadow: 2px 2px 10px black;
 	color: rgb(198, 145, 198, 0.8);
 	margin-bottom: 30px;
 }
@@ -122,6 +128,7 @@ body
 	font-weight: bold; /*Pone el texto en negrita*/
 	font-size: 2.75rem;
 	font-weight: 700;
+	text-shadow: 2px 2px 10px black;
 	color: rgb(198, 145, 198, 0.8);
 	margin-bottom: 30px;
 }
@@ -131,6 +138,7 @@ body
 	font-family: new times roman;
 	font-size: 1.25rem;
 	font-weight: 700;
+	text-shadow: 2px 2px 10px black;
 	color: rgb(198, 145, 198, 0.8);
 	margin-bottom: 80px;
 }
@@ -148,6 +156,7 @@ body
 {
 	font-family: evil_empire;
 	color: rgb(198, 145, 198, 0.8);
+	text-shadow: 2px 2px 10px black;
 	font-weight: bold; /*Pone el texto en negrita*/
 	text-transform: uppercase;
 	font-size: 1.25rem;
@@ -157,6 +166,7 @@ body
 {
     font-family: 'Amoria';
     font-weight: bold;
+	text-shadow: 2px 2px 10px black;
     text-decoration: none;
     color: rgba(198, 145, 198, 0.8);
     font-size: 1.25rem;
