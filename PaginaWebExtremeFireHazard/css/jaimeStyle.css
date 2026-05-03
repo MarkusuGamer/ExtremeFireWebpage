@@ -1,11 +1,12 @@
 /*CSS*/
-@font-face /* Se carga la fuente White Storm */
+/* Se carga la fuente White Storm */
+@font-face 
 {
 	font-family: "WhiteStorm";
 	src: url("../media/fonts/whiteStorm/WhiteStorm.otf");
 }
-
-body /* Para el fondo*/
+/* Para el fondo*/
+body 
 {
 	background-image: url("../media/img/Jaime/background.png");
 	background-repeat: no-repeat;
@@ -15,8 +16,8 @@ body /* Para el fondo*/
 	background-color:rgba(0,0,0,0.8);
 	background-blend-mode: lighten;
 }
-
-#sideNav{ /* Menú lateral*/
+/* Menú lateral*/
+#sideNav{ 
 	width: 200px;
 	height: 100vh;
 	position: fixed;
