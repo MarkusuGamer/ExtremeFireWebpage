@@ -9,7 +9,7 @@
 		<script src="../js/patriciaCode.js" defer></script>
 	</head>
 
-	<body onload="Start()" onscroll="navScrollHide()">
+	<body onload="Start()" onscroll="navScrollHide(); checkScrollPicture()">
 	
 		<nav class="nav" id="nav">
 		
@@ -37,9 +37,15 @@
 		
 		<main>
 		
-			<div class="foto-portada">
-				<img src="../media/img/Patricia/portada.png" alt="portada" class="portada-imagen">
+			<div id="criatura-creditos">
+				<img src ="../media/img/Patricia/criatura.png" alt= "criatura" class="criatura-imagen aparece-scroll">
+					<div id="creditos" class="aparece-scroll">
+						<p> Developed by Extreme Fire Hazard (we love creating games!) </p>
+					</div>
 			</div>
+				<div class="foto-portada">
+					<img src="../media/img/Patricia/portada.png" alt="portada" class="portada-imagen">
+				</div>
 			
 			<br>
 			<section class="game-info">

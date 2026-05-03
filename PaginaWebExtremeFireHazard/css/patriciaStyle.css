@@ -75,12 +75,58 @@
 	
 }
 
+@keyframes bailar /*Para hacer que la imagen este como bailando*/
+{
+	0% {transform: rotate(0deg);}
+	50% {transform: rotate(-15deg);}
+}
+
+.criatura-imagen
+{
+	width: 45px;
+}
+
+.criatura-imagen.visible
+{
+	opacity: 1;
+	animation: bailar 0.5s infinite ease-in-out; /*Para que lo haga siempre*/
+}
+
+.aparece-scroll
+{
+	opacity:0; /*Para que la imagen empiece en "invisible"*/
+	transition: opacity 3s ease;
+}
+
+.aparece-scroll.visible
+{
+	opacity:1;
+}
+
 .foto-portada 
 {
     display: flex;
     justify-content: center;
 	margin-bottom: 80px;
 }
+
+#criatura-creditos
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px; /*Espacio entre la imagen y el texto*/
+	width: 100%;
+	margin:0 auto;
+}
+
+#creditos
+{
+	font-family: 'Amoria';
+	font-size: 1rem;
+	font-weight: 900;
+	text-shadow: 5px 5px 15px black;
+	color: rgb(221, 181, 232, 0.8);
 }
 
 * {

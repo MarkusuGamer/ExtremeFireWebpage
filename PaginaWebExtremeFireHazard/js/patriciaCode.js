@@ -16,3 +16,15 @@ function navScrollHide() //Función para ocultar la barra de navegación cuando 
 		navbar.classList.remove('scrolled');
 	}
 }
+
+function checkScrollPicture() //Función para que aparezca una imagen
+{
+	var elementos = document.querySelectorAll('.aparece-scroll'); //Selecciona todas las imagenes que tengan esa clase
+	elementos.forEach(function(elemento)
+	{
+		if (elemento.getBoundingClientRect().top < window.innerHeight) //Comprueba si la imagen ya está visible en la pantalla
+		{
+			elemento.classList.add('visible'); //Si está visible, hace que aparezca
+		}
+	});
+}
