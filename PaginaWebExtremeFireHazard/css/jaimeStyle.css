@@ -1,22 +1,50 @@
 /*CSS*/
-body{
-	background-image: url("../media/img/Jaime/background.png");
+@font-face /* Cargo la fuente White Storm, que usaré en el resto del proyecto */
+{
+	font-family: "WhiteStorm";
+	src: url("../media/fonts/whiteStorm/WhiteStorm.otf");
 }
+
+body
+{
+	background-image: url("../media/img/Jaime/background.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-color:rgba(0,0,0,0.8);
+	background-blend-mode: lighten;
+}
+
 #sideNav{
-	with: 200px;
+	width: 330px;
 	height: 100vh;
 	position: fixed;
 	left: 0;
-	background: #f7dabe;
+	background: #2779F5;
 	z-index: 1;
 	transition: 0.5s;
+}
+h1 {
+	color: cyan;
+	font-size: 80px;
+	text-align: center;
+	font-family: "WhiteStorm";
+}
+h2 {
+	color: cyan;
+	font-size: 50px;
+	text-align: center;
+	font-family: "WhiteStorm";
 }
 ul{
 	margin-top: 80px;
 }
 li{
+	font-size: 30px;
 	list-style: none;
 	margin: 10px 60px;
+	font-family: "WhiteStorm";
 }
 a{
 	text-decoration: none;
@@ -28,7 +56,7 @@ a:hover{
 #boton{
 	width: 50px;
 	height: 50px;
-	background: #f7dabe;
+	background: #2779F5;
 	text-align: center;
 	position: fixed;
 	left: 30px;
@@ -38,18 +66,43 @@ a:hover{
 	cursor: pointer;
 	display: block;
 }
-img{
-	with: 20px;
-	margin-top: 2px;
+
+#header 
+{
+	padding-top: 10px;
 }
+
+
+#cover{
+	display: block;
+	margin: auto;
+	width: 100vh;
+    height: auto;
+	border-radius: 30px;
+	text-align: center;
+}	
 #fish{
 	width: 500px;
 	height: 500px;
 	text-align: center;
-	position: fixed;
-	background: #f7dabe;
+	margin: auto;
+
 }
-img{
-	with: 10px;
-	margin-left: 0px;
+
+.column {
+  float: left;
+  width: 45.00%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.button {
+	display: block;
+	margin: auto;
+	text-align: center;
 }

@@ -2,8 +2,8 @@
 var boton = document.getElementById("boton");
 var menu = document.getElementById("menu");
 var sideNav = document.getElementById("sideNav");
-var hat = document.getElementById("hat");
-var fish = document.getElementById("fish");
+let vid1 = document.getElementById("video1"); 
+let vid2 = document.getElementById("video2"); 
 
 sideNav.style.left = "-250px";
 
@@ -18,3 +18,20 @@ function abrirMenu(){
 		menu.src = "../media/img/Jaime/menu.png";
 	}
 }
+
+
+function playVid() { 
+  vid1.play(); 
+} 
+
+function pauseVid() { 
+  vid1.pause(); 
+} 
+
+function playVid2() { 
+  vid2.play(); 
+} 
+
+function pauseVid2() { 
+  vid2.pause(); 
+} 

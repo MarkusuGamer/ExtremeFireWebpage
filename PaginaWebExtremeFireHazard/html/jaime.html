@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Menú lateral</title>
+		<title>Fishy Bussiness</title>
 		<link type = "text/css" rel="stylesheet" href= "../css/jaimeStyle.css">
 		<script type = "text/javascript" src="../js/jaimeCode.js" defer></script>
 	</head>
 	<body>
 		<div id="sideNav">
 			<nav>
+				<div>
+					<a href="../index.html">
+					<img id="logo" src="../media/img/jaime/logo.jpg" alt="EFH Logo">
+					</a>
+				</div>
 				<ul>
-					<li><a href= "https://es.yahoo.com/" target="_blank">Yahoo</a></li>
-					<li><a href= "https://www.google.com/" target="_blank">Google</a></li>
-					<li><a href= "https://www.youtube.com/" target="_blank">Youtube</a></li>
-					<li><a href= "https://www.u-tad.com/" target="_blank">U-tad</a></li>
+					<li><a href="rafa.html">Snackrifice</a></li>
+					<li><a href="bruno.html">Iru's Dawn</a></li>
+					<li><a href="patricia.html">Vlorp Liberation</a></li>
+					<li><a href="scar.html">About Us</a></li>
 				</ul>
 			</nav>
 		</div>
-		<div id="boton" onclick = "abrirMenu()">
-			<img src="../media/img/Jaime/menu.png" id="menu" alt="no encuentro">
-		</div>
-		<div id="fish">
-			<img src="../media/img/Jaime/hat.png" id="hat">
-			<img src="../media/img/Jaime/fish.gif" id="fish">
-			 <p class="font-arial">Dive into the parallel story to UNDERTALE! Fight or spare your way through action-packed battles as you explore a mysterious world alongside an endearing cast of new and familiar characters. Chapters 1-4 will be available at launch, with more planned as free updates!</p>
-
-		</div>
-		<div>
-		    <ul class="highlight-white font-pacifico">
-          
-				<li>A massive soundtrack and story written by Toby Fox!</li>
-          
-				<li>Meet new and endearing main characters, as well as familiar faces like Toriel, Sans, and more. Huh? Papyrus? No, he's busy. Sorry</li>
-          
-				<li>Smooth and expressive pixel-animation by Temmie. She also has a new hat (in-game)</li>
-          
-				<li>A linear, chapter-based system that you can pick up from anywhere.</li>
-          
-				<li>Creative bullet-dodging based battles inspired by games like the Touhou series and Chrono Trigger.</li>
-          
-				<li>Jevilishly difficult hidden bosses.</li>
-          
-				<li>And...</li>
-          
-				<li>...</li>
-          
-				<li>... only 1 ending...?</li>
-          
-			</ul>
-		</div>
+		<header id="header"> 
+			<div id="title">
+				<h1><b>Fishy Bussiness</b></h1>
+			</div>
+		</header>
+			<div id="boton" onclick = "abrirMenu()">
+				<img src="../media/img/Jaime/menu.png" id="menu" alt="no encuentro">
+			</div>
+		<main>
+			<div id="fish">
+				<img src="../media/img/Jaime/fish.gif" id="fish">
+			</div>
+			<div>
+				<h2>Dive into the sillyness with your buddies on a new friendslop adventure! </h2>
+			</div>
+			<div class="row">
+				<div class="column">
+					<button class="button" onclick="playVid()" type="button">Play Video</button>
+					<button class="button" onclick="pauseVid()" type="button">Pause Video</button><br> 
+					<video class="button" id="video1" width="640" height="480">
+						<source src="../media/video/Jaime/test.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="column">
+					<button class="button" onclick="playVid2()" type="button">Play Video</button>
+					<button class="button" onclick="pauseVid2()" type="button">Pause Video</button><br> 
+					<video class="button" id="video2" width="640" height="480">
+						<source src="../media/video/Jaime/test2.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
