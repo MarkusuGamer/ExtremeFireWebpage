@@ -7,6 +7,7 @@ let vid2 = document.getElementById("video2");
 
 sideNav.style.left = "-250px";
 
+//Función del menú lateral//
 function abrirMenu(){
 	
 	if(sideNav.style.left === "-250px"){
@@ -19,7 +20,7 @@ function abrirMenu(){
 	}
 }
 
-
+//Función de play y pausa para cada vídeo//
 function playVid() { 
   vid1.play(); 
 } 

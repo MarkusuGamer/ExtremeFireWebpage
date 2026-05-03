@@ -1,11 +1,11 @@
 /*CSS*/
-@font-face /* Cargo la fuente White Storm, que usaré en el resto del proyecto */
+@font-face /* Se carga la fuente White Storm */
 {
 	font-family: "WhiteStorm";
 	src: url("../media/fonts/whiteStorm/WhiteStorm.otf");
 }
 
-body
+body /* Para el fondo*/
 {
 	background-image: url("../media/img/Jaime/background.png");
 	background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body
 	background-blend-mode: lighten;
 }
 
-#sideNav{
+#sideNav{ /* Menú lateral*/
 	width: 200px;
 	height: 100vh;
 	position: fixed;
@@ -25,6 +25,7 @@ body
 	z-index: 1;
 	transition: 0.5s;
 }
+/* Modificaciones al Texto*/
 h1 {
 	color: cyan;
 	font-size: 80px;
@@ -34,6 +35,12 @@ h1 {
 h2 {
 	color: cyan;
 	font-size: 50px;
+	text-align: center;
+	font-family: "WhiteStorm";
+}
+h3{
+	color: black;
+	font-size: 40px;
 	text-align: center;
 	font-family: "WhiteStorm";
 }
@@ -54,6 +61,7 @@ a{
 a:hover{
 	color:cyan;
 }
+/* Modificaciones al logo*/
 .logoo {
 	display: block;
 	margin: auto;
@@ -67,6 +75,7 @@ a:hover{
 	border: 0.25rem solid cyan;
 	cursor: pointer;
 }
+/* Boton del menu*/
 #boton{
 	width: 50px;
 	height: 50px;
@@ -80,7 +89,7 @@ a:hover{
 	cursor: pointer;
 	display: block;
 }
-
+/* Título*/
 #header 
 {
 	padding-top: 10px;
@@ -95,14 +104,16 @@ a:hover{
 	border-radius: 30px;
 	text-align: center;
 }	
-#fish{
+/* Modificaciones a los gifs*/
+#gif{
 	width: 500px;
 	height: 500px;
 	text-align: center;
 	margin: auto;
+	
 
 }
-
+/* Columnas y filas para los vídeos*/
 .column {
   float: left;
   width: 45.00%;
@@ -114,6 +125,7 @@ a:hover{
   clear: both;
   display: table;
 }
+/* Modificaciones a los vídeos*/
 .vid {
 	display: block;
 	margin: auto;
@@ -125,6 +137,7 @@ a:hover{
 	height: auto;
 	border: 0.25rem solid cyan;
 }
+/* Modificaciones a los botones de play y pausa de los vídeos*/
 .button {
 	display: block;
 	margin: auto;
@@ -137,6 +150,7 @@ a:hover{
 	border: 0.25rem solid cyan;
 	cursor: pointer;
 }
+/* Pie de página*/
 .footer
 {
 	color: #2779F5;
@@ -160,7 +174,5 @@ a:hover{
 	font-weight:bold;
 	text-align: center;
 	color: black;
-	text-shadow: 2px 2px 7px #000000;
-	text-decoration: none;
 }
 
