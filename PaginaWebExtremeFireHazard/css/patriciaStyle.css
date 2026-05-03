@@ -64,8 +64,8 @@
 	margin-bottom: 70px;
 	font-family: 'Amoria';
 	font-size: 6rem;
-	text-shadow: 2px 2px 10px black;
-	color: rgb(108, 41, 108, 0.8)
+	text-shadow: 5px 5px 15px ;
+	color: rgb(23, 235, 53, 0.8);
 	
 }
 
@@ -107,8 +107,8 @@ body
 	font-family: 'Amoria';
 	font-size: 2rem;
 	font-weight: 900;
-	text-shadow: 2px 2px 10px black;
-	color: rgb(198, 145, 198, 0.8);
+	text-shadow: 5px 5px 15px black;
+	color: rgb(221, 181, 232, 0.8);
 	margin-bottom: 30px;
 }
 
@@ -117,8 +117,8 @@ body
 	font-family: new times roman;
 	font-size: 1.25rem;
 	font-weight: 700;
-	text-shadow: 2px 2px 10px black;
-	color: rgb(198, 145, 198, 0.8);
+	text-shadow: 5px 5px 15px black;
+	color: rgb(221, 181, 232, 0.8);
 	margin-bottom: 30px;
 }
 
@@ -128,8 +128,8 @@ body
 	font-weight: bold; /*Pone el texto en negrita*/
 	font-size: 2.75rem;
 	font-weight: 700;
-	text-shadow: 2px 2px 10px black;
-	color: rgb(198, 145, 198, 0.8);
+	text-shadow: 5px 5px 15px black;
+	color: rgb(213, 66, 235, 0.8);
 	margin-bottom: 30px;
 }
 
@@ -138,8 +138,8 @@ body
 	font-family: new times roman;
 	font-size: 1.25rem;
 	font-weight: 700;
-	text-shadow: 2px 2px 10px black;
-	color: rgb(198, 145, 198, 0.8);
+	text-shadow: 5px 5px 15px black;
+	color: rgb(221, 181, 232, 0.8);
 	margin-bottom: 80px;
 }
 
@@ -155,8 +155,8 @@ body
 #download-text
 {
 	font-family: evil_empire;
-	color: rgb(198, 145, 198, 0.8);
-	text-shadow: 2px 2px 10px black;
+	color: rgb(221, 181, 232, 0.8);
+	text-shadow: 5px 5px 15px black;
 	font-weight: bold; /*Pone el texto en negrita*/
 	text-transform: uppercase;
 	font-size: 1.25rem;
@@ -166,9 +166,9 @@ body
 {
     font-family: 'Amoria';
     font-weight: bold;
-	text-shadow: 2px 2px 10px black;
+	text-shadow: 5px 5px 15px black;
     text-decoration: none;
-    color: rgba(198, 145, 198, 0.8);
+    color: rgb(221, 181, 232, 0.8);
     font-size: 1.25rem;
 }
 
@@ -191,7 +191,7 @@ body
 
 .purple-highlight
 {
-	color: #7D4791;
+	color: #D542EB;
 }
 
 footer
